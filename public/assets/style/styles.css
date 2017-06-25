@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Diavlo_MEDIUM_II;
+    src: local("Diavlo_MEDIUM_II"), url(Diavlo_MEDIUM_II.otf);
+}
+
+body {
+    background-image: url('../images/orangeTile.png') !important;  
+    font-family: Diavlo_MEDIUM_II !important;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.searchInput {
+  margin-left: 300%;
+  margin-top: 50%;
+}
+
+.main-button {
+    z-index: 100 !important;
+    position: absolute !important;
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 100% !important;
+    background-color: #16d5e6 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #ffffff !important;
+    font-weight: lighter !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+@keyframes pulse_animation {
+    0% { transform: scale(1); }
+    30% { transform: scale(1); }
+    40% { transform: scale(1.08); }
+    50% { transform: scale(1); }
+    60% { transform: scale(1); }
+    70% { transform: scale(1.05); }
+    80% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+.pulse {
+    animation-name: pulse_animation;
+    animation-duration: 2000ms;
+    transform-origin:70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.child-button {
+    z-index: 100 !important;
+    position: absolute !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 100% !important;
+    background-color: #ffffff !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px !important;
+    color: #16d5e6 !important;
+}
+
+.child-button:hover,
+.main-button:hover {
+    border-style: solid !important;
+    border-color: #ffbd4a !important;
+    border-width: 1px !important;
+    margin: 5px !important;
+}
+
+.flshr-logo {
+    z-index: 100 !important;
+    position: absolute !important;
+    left: 80% !important;
+    top: 8% !important;
+    border: solid !important;
+    border-width: 5px !important;
+    border-radius: 10px !important;
+    border-color: #16d5e6 !important;
+    padding: 5px !important;
+}
+
+.panel {
+    padding: 10px;
+    margin: 10px;
+}
+
+.loggedInName {
+    z-index: 1000 !important;
+    background-color: #15D4E6;
+    color: #eeeeee;
+    margin-left: 40%;
+    margin-top: 1%;
+    margin-bottom: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 20%;
+    text-align: center;
+}
+
+.signup-img {
+    width: 25% !important;
+    height: auto !important;
+}
+
+.google-maps {
+    height: 500px !important;
+}
+
+.sidebarR {
+    z-index: 15 !important;
+    margin-top: 380px;
+}
+
+.searchBathroom {
+    position: absolute !important;
+    right: 21% !important;
+    top: 10% !important;
+    width: 75% !important;
+}
+
+.searchHeader,
+.searchBar {
+    padding: 10px !important;
+    border-style: solid !important;
+    border-color: #16d5e6 !important;
+    border-radius: 5px !important;
+    width: 75%;
+}
+
+.search-btn {
+    margin-left: 4px !important;
+}
+
+.add-review-panel {
+    position: absolute !important;
+    right: 21% !important;
+    top: 20% !important;
+    width: 75% !important;
+    border-style: solid !important;
+    border-color: #16d5e6 !important;
+    border-radius: 5px !important;
+    border-width: 5px !important;
+}
+/**
+ * The geosuggest module
+ * NOTE: duplicated font-sizes' are for browsers which don't support rem (only IE 8)
+ */
+.geosuggest {
+  font-size: 18px;
+  font-size: 1rem;
+  position: relative;
+  width: 50%;
+  margin: 1em auto;
+  text-align: left;
+}
+.geosuggest__input {
+  width: 100%;
+  border: 2px solid transparent;
+  box-shadow: 0 0 1px #3d464d;
+  padding: .5em 1em;
+  -webkit-transition: border 0.2s, box-shadow 0.2s;
+          transition: border 0.2s, box-shadow 0.2s;
+}
+.geosuggest__input:focus {
+  border-color: #267dc0;
+  box-shadow: 0 0 0 transparent;
+}
+.geosuggest__suggests {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 25em;
+  padding: 0;
+  margin-top: -1px;
+  background: #fff;
+  border: 2px solid #267dc0;
+  border-top-width: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  list-style: none;
+  z-index: 5;
+  -webkit-transition: max-height 0.2s, border 0.2s;
+          transition: max-height 0.2s, border 0.2s;
+}
+.geosuggest__suggests--hidden {
+  max-height: 0;
+  overflow: hidden;
+  border-width: 0;
+}
+
+/**
+ * A geosuggest item
+ */
+.geosuggest__item {
+  font-size: 18px;
+  font-size: 1rem;
+  padding: .5em .65em;
+  cursor: pointer;
+}
+.geosuggest__item:hover,
+.geosuggest__item:focus {
+  background: #f5f5f5;
+}
+.geosuggest__item--active {
+  background: #267dc0;
+  color: #fff;
+}
+.geosuggest__item--active:hover,
+.geosuggest__item--active:focus {
+  background: #ccc;
+}
+.geosuggest__item__matched-text {
+  font-weight: bold;
+}
+
+.logOutBtn {
+  border-radius: 5px;
+}
+
+.welcomeDiv {
+   font-family: sans-serif;
+    font-size: 20px;
+    background-color: #15D4E6;
+    color: #eeeeee;
+    margin-left: 35%;
+    margin-top: 4%;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+.aboutDiv {
+   font-family: sans-serif;
+    font-size: 15px;
+    background-color: #15D4E6;
+    color: #eeeeee;
+    margin-left: -12%;
+    margin-top: 1%;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+    text-align: left;
+}

@@ -1,0 +1,37 @@
+{
+  "name": "react-apollo-email-example",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.8.1"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "google-maps-react": "^1.0.19",
+    "lodash.range": "^3.2.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.3.1",
+    "react-apollo": "^1.2.0",
+    "react-dom": "^15.3.1",
+
+    "react-geosuggest": "^2.3.3",
+
+    "react-geolocated": "^1.0.3",
+
+    "react-google-maps": "^6.3.0",
+    "react-motion": "^0.5.0",
+    "react-router": "^2.8.0",
+    "semantic-ui": "^2.2.10",
+    "semantic-ui-react": "^0.70.0",
+    "tachyons": "^4.3.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/react-scripts/config/eslint.js"
+  }
+}

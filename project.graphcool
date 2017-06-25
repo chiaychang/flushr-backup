@@ -1,0 +1,43 @@
+# project: cj4als4tt5zbg0141i8uzents
+# version: 2
+
+type File implements Node {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
+
+type Review implements Node {
+  createdAt: DateTime!
+  description: String!
+  rating: Float!
+  id: ID! @isUnique
+  imageUrl: String!
+  updatedAt: DateTime!
+}
+
+type User implements Node {
+  createdAt: DateTime!
+  emailAddress: String!
+  emailSubscription: Boolean!
+  id: ID! @isUnique
+  name: String!
+  imageUrl: String!
+  updatedAt: DateTime!
+}
+
+type Bathroom implements Node {
+  location: String!
+  id: ID! @isUnique
+  imageUrl: String!
+  changingTable: Boolean!
+  singleOccupancy: Boolean!
+  isPublic: Boolean!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
